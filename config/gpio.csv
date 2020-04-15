@@ -1,0 +1,39 @@
+GPIO, 0x40010800, 0x40010C00, 0x40011000, 0x40011400, 0x40011800, 0x40011C00, 0x40012000
+CRL,  0x00000000
+ CNF7, MODE7,  CNF6, MODE6,  CNF5, MODE5,  CNF4, MODE4,  CNF3, MODE3,  CNF2, MODE2, CNF1, MODE1, CNF0, MODE0
+31-30, 29-28, 27-26, 25-24, 23-22, 21-20, 19-18, 17-16, 15-14, 13-12, 11-10,   9-8,  7-6, 5-4,   3-2,   2-0
+   rw,    rw,   rw,     rw,   rw,     rw,    rw,    rw,    rw,    rw,    rw,    rw,   rw,  rw,    rw,   rw
+
+CRH,  0x00000004
+ CNF15, MODE15,  CNF14, MODE14,  CNF13, MODE13,  CNF12, MODE12, CNF11, MODE11, CNF10, MODE10, CNF9, MODE9, CNF8, MODE8
+ 31-30,  29-28,  27-26,  25-24,  23-22,  21-20,  19-18, 17-16,  15-14,  13-12, 11-10,    9-8,  7-6, 5-4,   3-2,   2-0
+    rw,     rw,     rw,     rw,     rw,     rw,     rw,    rw,     rw,     rw,    rw,     rw,   rw,  rw,    rw,   rw
+
+IDR, 0x00000008
+IDR
+31-0
+r
+
+
+ODR, 0x0000000C
+ODR
+31-0
+rw
+
+
+BSRR, 0x00000010
+BR,       BS
+  31-16, 15-0
+   w ,     w
+
+BRR, 0x00000014
+RESERVED, BR
+   31-16, 15-0
+        ,   w
+
+LCKR, 0x00000018
+RESERVED, LCKK, LCK15, LCK14, LCK13, LCK12, LCK11, LCK10, LCK9, LCK8, LCK7, LCK6, LCK5, LCK4, LCK3, LCK2, LCK1, LCK0
+   31-17,   16,    15,    14,    13,    12,    11,    10,    9,    8,    7,    6,    5,    4,    3,    2,    1,    0
+        ,   rw,    rw,    rw,    rw,    rw,    rw,    rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,    rw
+
+

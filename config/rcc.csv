@@ -1,0 +1,52 @@
+rcc,0x40021000
+cr,0x00000000
+RESERVED, PLLRDY,PLLON,RESERVED,CSSON,HSEBYP,HSERDY,HSEON,HSICAL,HSITRIM,RESERVED,HSIRDY,HSION
+   31-26,25,24,    23-20,19,18,17,16,  15-8,    7-3,2,1,0
+        ,      r,   rw,        ,   rw,    rw,     r,   rw,     r,     rw,        ,     r,   rw
+
+cfgr,0x00000004
+RESERVED,   MCO, RESERVED, USBPRE, PLLMUL, PLLXTPRE, PLLSRC, ADCPRE,  PPRE2, PPRE1,   HPRE,    SWS,  SW
+   31-27, 26-24,   23,       22,   21-18,   17,        16,    15-14,  13-11,  10-8,   7-4,     3-2,  1-0
+        ,    rw,         ,   rw,     rw,    rw,        rw,     rw,    rw,      rw,    rw,      r,  rw
+
+
+cir, 0x00000008
+RESERVED, CSSC, RESERVED, PLLRDYC, HSERDYC, HSIRDYC, LSERDYC, LSIRDYC, RESERVED, PLLRDYIE, HSERDYIE, HSIDRYIE, LSERDYIE, LSIRDYIE, CSSF, RESERVED, PLLRDYF, HSERDYF, HSIRDYF, LSERDYF, LSIRDYF
+   31-24,23,    22-21,20,19,18,17,16,    15-13,12,11,10,9,8,7,      6-5,4,3,2,1,0
+        ,    w,        w,       w,       w,       w,       w,       w,         ,      rw,        rw,       rw,       rw,       rw,    r,         ,      r,        r,       r,       r,       r
+
+apb2rstr, 0x0000000C
+RESERVED, TIM11RST, TIM10RST, TIM9RST,  RESERVED,ADC3RST,USART1RST,TIM8RST,SPI1RST,TIM1RST,ADC2RST, ADC1RST,IOPGRST,IOPFRST,IOPERST,IOPDRST,IOPCRST,IOPBRST,IOPARST,RESERVED, AFIORST
+31-22,21,20,19,     18-16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0
+        ,       rw,       rw,      rw,          ,     rw,       rw,     rw,     rw,     rw,     rw,      rw,     rw,     rw,     rw,     rw,     rw,     rw,     rw,        ,      rw
+
+apb1rstr,0x00000010
+RESERVED,DACRST,PWRRST,BKPRST,RESERVED,CANRST,RESERVED,USBRST,I2C2RST,I2C1RST,UART5RST,UART4RST,USART3RST,USART2RST,RESERVED,SPI3RST,SPI2RST,RESERVED,	WWDGRST,RESERVED,TIM14RST,TIM13RST,TIM12RST,TIM7RST,TIM6RST,TIM5RST,TIM4RST,TIM3RST,TIM2RST
+31-30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13-12,11,10-9,8,7,6,5,4,3,2,1,0
+,rw,rw,rw,,rw,,rw,rw,rw,rw,rw,rw,rw,,rw,rw,,rw,,rw,rw,rw,rw,rw,rw,rw,rw,rw
+
+ahbenr, 0x00000014
+RESERVED, SDIO,RESERVED,FSMCEN,RESERVED,CRCEN,RESERVED,FLITFEN,RESERVED,SRAMEN,DMA2EN,DMA1EN
+31-11,    10,  9,        8,     7,      6,       5,     4,       3,       2,    1,     0
+,         rw,   ,        rw,     ,      rw,       ,    rw,        ,      rw,   rw,     rw
+
+apb2enr, 0x00000018
+RESERVED, TIM11EN, TIM10EN, TIM9EN,  RESERVED,ADC3EN,USART1EN,TIM8EN,SPI1EN,TIM1EN,ADC2EN, ADC1EN,IOPGEN,IOPFEN,IOPEEN,IOPDEN,IOPCEN,IOPBEN,IOPAEN,RESERVED, AFIOEN
+31-22,21,20,19,     18-16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0
+,     rw,  rw,      rw,          ,     rw,       rw,     rw,     rw,     rw,     rw,      rw,     rw,     rw,     rw,     rw,     rw,     rw,     rw,        ,rw
+
+apb1enr,0x0000001C
+RESERVED,DACEN,PWREN,BKPEN,RESERVED,CANEN,RESERVED,USBEN,I2C2EN,I2C1EN,UART5EN,UART4EN,USART3EN,USART2EN,RESERVED,SPI3EN,SPI2EN,RESERVED,WWDGEN,RESERVED,TIM14EN,TIM13EN,TIM12EN,TIM7EN,TIM6EN,TIM5EN,TIM4EN,TIM3EN,TIM2EN
+31-30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13-12,11,10-9,8,7,6,5,4,3,2,1,0
+,rw,rw,rw,,rw,,rw,rw,rw,rw,rw,rw,rw,,rw,rw,,rw,,rw,rw,rw,rw,rw,rw,rw,rw,rw
+
+
+bdcr, 0x00000020
+RESERVED,BDRST,RTCEN,RESERVED,RTCSEL,RESERVED,LSEBYP,LSERDY,LSEON
+31-17,16,15,14-10,9-8,7-3, 2,1,0
+     ,rw,rw,     , rw, rw,rw,r,rw
+     
+csr, 0x00000024
+LPWRRSTF, WWDGRSTF, IWDGRSTF, SFTRSTF, PORRSTF, PINRSTF, RESERVED, RMVF, RESERVED,LSIRDY,LSION
+      31,       30,      29,    28,       27,      26,      25,     24,     23-2,    1,     0
+      rw,       rw,      rw,    rw,       rw,      rw,        ,     rw,         ,    r,    rw

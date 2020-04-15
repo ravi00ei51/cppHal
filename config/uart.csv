@@ -1,0 +1,35 @@
+uart, 0x40013800, 0x40004400, 0x40004800, 0x40004C00, 0x40005000
+SR, 0x00000000
+RESERVED, CTS, LBD, TXE, TC, RXNE, IDLE, ORE, NE, FE, PE
+   31-10,   9,   8,   7,  6,    5,    4,   3,  2,  1,  0
+        ,  rw,  rw,   r, rw,   rw,    r,   r,  r,  r,  r
+ 
+DR, 0x00000004
+RESERVED,   DR
+    31-9,   8-0
+        ,   rw
+
+BRR, 0x00000008
+RESERVED, DIV_MANTISSA,  DIV_FRACTION
+31-16,     15-4,          3-0
+     ,       rw,           rw
+
+CR1, 0x0000000C
+RESERVED, UE,   M, WAKE, PCE, PS, PEIE, TXIE, TCIE, RXNEIE, IDLEIE, TE, RE, RWU, SBK
+31-14,    13,  12,   11,  10,  9,    8,    7,    6,      5,      4,  3,  2,   1,  0
+     ,    rw,  rw,   rw,  rw, rw,   rw,   rw,   rw,     rw,     rw, rw, rw,  rw, rw
+
+CR2, 0x00000010
+RESERVED, LINEN,  STOP, CLKEN, CPOL, CPHA, LBCL, RESERVED, LBDIE, LBDL, RESERVED, ADD
+31-15,       14, 13-12,    11,   10,    9,    8,        7,     6,    5,       4,  3-0
+        ,    rw,    rw,    rw,   rw,   rw,   rw,         ,    rw,   rw,       rw,  rw
+
+CR3, 0x00000014
+RESERVED, CTSIE, CTSE, RTSE, DMAT, DMAR, SCEN, NACK, HDSEL, IRLP, IRNE, EIE
+   31-11,    10,    9,    8,    7,    6,    5,    4,     3,    2,    1,   0
+        ,    rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw,   rw
+
+GTPR, 0x00000018
+RESERVED,   GT,   PSC
+31-16,    15-8,   7-0
+     ,      rw,    rw

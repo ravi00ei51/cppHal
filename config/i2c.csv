@@ -1,0 +1,48 @@
+I2C, 0x40005400, 0x40005800
+CR1, 0x00000000
+RESERVED, SWRST, RESERVED, ALERT, PEC, POS, ACK, STOP, START, NOSTRETCH, ENGC, ENPEC, ENARP, SMBTYPE, RESERVED, SMBUS, PE
+31-16   ,    15,       14,    13,  12,  11,  10,    9,     8,         7,    6,     5,     4,       3,        2,     1,  0
+        ,    rw,         ,    rw,  rw,  rw,  rw,   rw,    rw,        rw,   rw,    rw,    rw,      rw,       rw,    rw, rw
+
+CR2, 0x00000004
+RESERVED, LAST, DMAEN, ITBUFEN, ITEVTEN, ITERREN, RESERVED, FREQ
+   31-13,   12,    11,      10,       9,       8,      7-6,  5-0
+        ,   rw,    rw,      rw,      rw,      rw,         ,   rw
+
+OAR1, 0x00000008
+RESERVED, ADDMODE, RESERVED, ADD, ADD71, ADD0
+   31-16,      15,    14-10, 9-8,  7-1,     0
+        ,      rw,         ,  rw,   rw,    rw
+
+OAR2, 0x0000000C
+RESERVED, ADD2, ENDUAL
+    31-8,  7-1,      0
+        ,   rw,     rw
+
+DR, 0x00000010
+
+RESERVED,  DR
+31-8,     7-0
+    ,      rw
+    
+SR1, 0x00000014
+
+RESERVED, SMBALERT, TIMEOUT, RESERVED, PECERR, OVR, AF, ARLO, BERR, TXE, RXNE, RESERVED, STOPF, ADD10, BTF, ADDR, SB
+   31-16,       15,      14,       13,     12,  11, 10,    9,    8,   7,    6,        5,     4,     3,   2,    1,  0
+        ,       rw,      rw,         ,     rw,  rw, rw,   rw,   rw,   r,    r,         ,     r,     r,   r,    r,  r
+        
+SR2, 0x00000018
+RESERVED,  PEC, DUALF, SMBHOST, SMBDEFAULT, GENCALL, RESERVED, TRA, BUSY, MSL
+   31-16, 15-8,     7,       6,          5,       4,        3,   2,    1,   0
+        ,    r,     r,       r,          r,       r,        r,   r,    r,   r
+
+
+CCR, 0x0000001C
+RESERVED, F_S, DUTY, RESERVED,   CCR
+   31-16,  15,   14,    13-12,  11-0
+        ,  rw,   rw,         ,    rw
+
+TRISE, 0x00000020
+RESERVED, TRISE
+31-6,     5-0
+    ,     rw

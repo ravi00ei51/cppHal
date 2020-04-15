@@ -1,0 +1,48 @@
+spi, 0x40013000, 0x40003800, 0x40003C00
+CR1, 0x00000000
+RESERVED, BIDIMODE, BIDIOE, CRCEN, CRCNEXT, DFF, RXONLY, SSM, SSI, LSBFIRST, SPE,  BR, MSTR, CPOL, CPHA
+   31-16,        15,    14,    13,      12,  11,     10,   9,   8,        7,   6, 5-3,    2,    1,    0
+        ,        rw,    rw,    rw,      rw,  rw,     rw,  rw,  rw,       rw,  rw,  rw,   rw,   rw,   rw
+        
+CR2, 0x00000004
+RESERVED,   TXEIE, RXNEIE, ERRIE, RESERVED, RESERVED, SSOE, TXDMAEN, RXDMAEN
+    31-8,       7,      6,     5,        4,        3,    2,       1,       0
+        ,      rw,     rw,    rw,         ,         ,   rw,      rw,      rw
+        
+SR, 0x00000008
+RESERVED, BSY, OVR, MODF, CRCERR, UDR, CHSIDE, TXE, RXNE
+    31-8,   7,   6,    5,      4,   3,      2,   1,    0
+        ,   r,   r,    r,     rw,   r,      r,   r,    r
+     
+
+DR, 0x0000000C
+RESERVED,   DR
+   31-16, 15-0 
+        ,   rw 
+     
+CRCPR, 0x00000010
+RESERVED, CRCPOLY
+   31-16,    15-0
+        ,      rw
+
+RXCRCR, 0x00000014
+RESERVED, RXCRC 
+   31-16,  15-0
+        ,     r  
+
+TXCRCR, 0x00000018
+RESERVED, TXCRC 
+   31-16,  15-0    
+        ,     r 
+
+I2SCFGR, 0x0000001C
+RESERVED, I2SMOD, I2SE, I2SCFG, PCMSYNC, RESERVED, I2SSTD, CKPOL, DATLEN, CHLEN   
+   31-12,     11,   10,    9-8,       7,        6,    5-4,     3,    2-1,     0  
+        ,     rw,   rw,     rw,      rw,         ,     rw,    rw,     rw,    rw
+
+I2SPR, 0x00000020
+RESERVED, MKCOE, ODD, I2SDIV
+   31-10,     9,   8,    7-0
+        ,    rw,  rw,     rw
+
+

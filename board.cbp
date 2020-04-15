@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="board" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/board" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/board" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="DAL/LCD/LiquidCrystal_I2C.cpp" />
+		<Unit filename="DAL/LCD/LiquidCrystal_I2C.h" />
+		<Unit filename="DAL/MPU9250/MPU9250_RegisterMap.h" />
+		<Unit filename="DAL/MPU9250/SparkFunMPU9250-DMP.cpp" />
+		<Unit filename="DAL/MPU9250/SparkFunMPU9250-DMP.h" />
+		<Unit filename="DAL/MPU9250/util/MPU9250_RegisterMap.h" />
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_clk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_clk.h" />
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_i2c.cpp" />
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_i2c.h" />
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_log.cpp" />
+		<Unit filename="DAL/MPU9250/util/arduino_mpu9250_log.h" />
+		<Unit filename="DAL/MPU9250/util/dmpKey.h" />
+		<Unit filename="DAL/MPU9250/util/dmpmap.h" />
+		<Unit filename="DAL/MPU9250/util/inv_mpu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DAL/MPU9250/util/inv_mpu.h" />
+		<Unit filename="DAL/MPU9250/util/inv_mpu_dmp_motion_driver.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DAL/MPU9250/util/inv_mpu_dmp_motion_driver.h" />
+		<Unit filename="DAL/MPU9250/util/test.h" />
+		<Unit filename="DAL/esp8266AT/esp8266.cpp" />
+		<Unit filename="DAL/esp8266AT/esp8266.h" />
+		<Unit filename="DAL/mcp2515/CANSPI.cpp" />
+		<Unit filename="DAL/mcp2515/CANSPI.h" />
+		<Unit filename="DAL/mcp2515/MCP2515.cpp" />
+		<Unit filename="DAL/mcp2515/MCP2515.h" />
+		<Unit filename="HAL/stm32f103rb/afio/afio.h" />
+		<Unit filename="HAL/stm32f103rb/dma/dma.h" />
+		<Unit filename="HAL/stm32f103rb/gpio/gpio.h" />
+		<Unit filename="HAL/stm32f103rb/i2c/i2c.h" />
+		<Unit filename="HAL/stm32f103rb/interrupt/interrupt.cpp" />
+		<Unit filename="HAL/stm32f103rb/interrupt/interrupt.h" />
+		<Unit filename="HAL/stm32f103rb/rcc/rcc.h" />
+		<Unit filename="HAL/stm32f103rb/spi/spi.h" />
+		<Unit filename="HAL/stm32f103rb/stm32f103rb.h" />
+		<Unit filename="HAL/stm32f103rb/uart/uart.h" />
+		<Unit filename="PAL/PERIPHERAL/clock/clock.h" />
+		<Unit filename="PAL/PERIPHERAL/dma/dma_driver.h" />
+		<Unit filename="PAL/PERIPHERAL/i2c/i2c_comms.h" />
+		<Unit filename="PAL/PERIPHERAL/iopin/iopin.h" />
+		<Unit filename="PAL/PERIPHERAL/spi/spi_comms.cpp" />
+		<Unit filename="PAL/PERIPHERAL/spi/spi_comms.h" />
+		<Unit filename="PAL/PERIPHERAL/uart/uart_comms.cpp" />
+		<Unit filename="PAL/PERIPHERAL/uart/uart_comms.h" />
+		<Unit filename="PAL/peripheral.h" />
+		<Unit filename="app/shell.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util/Tuple.h" />
+		<Unit filename="util/circular_buffer.h" />
+		<Unit filename="util/funcTuple.h" />
+		<Unit filename="util/mem.cpp" />
+		<Unit filename="util/mem.h" />
+		<Unit filename="util/types.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

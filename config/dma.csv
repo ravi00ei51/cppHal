@@ -1,0 +1,31 @@
+DMA, 0x40020000, 0x40020400
+ISR, 0x00000000
+RESERVED, TEIF7, HTIF7, TCIF7, GIF7, TEIF6, HTIF6, TCIF6, GIF6, TEIF5, HTIF5, TCIF5, GIF5, TEIF4, HTIF4, TCIF4, GIF4, TEIF3, HTIF3, TCIF3, GIF3, TEIF2, HTIF2, TCIF2, GIF2, TEIF1, HTIF1, TCIF1, GIF1
+   31-28,    27,    26,    25,   24,    23,    22,    21,   20,    19,    18,    17,   16,    15,    14,    13,   12,    11,    10,     9,    8,     7,     6,     5,    4,     3,     2,     1,    0
+        ,     r,     r,     r,    r,     r,     r,     r,    r,     r,     r,     r,    r,     r,     r,     r,    r,     r,     r,     r,    r,     r,     r,     r,    r,     r,     r,     r,    r
+
+IFCR, 0x00000004
+RESERVED, CTEIF7, CHTIF7, CTCIF7, CGIF7, CTEIF6, CHTIF6, CTCIF6, CGIF6, CTEIF5, CHTIF5, CTCIF5, CGIF5, CTEIF4, CHTIF4, CTCIF4, CGIF4, CTEIF3, CHTIF3, CTCIF3, CGIF3, CTEIF2, CHTIF2, CTCIF2, CGIF2, CTEIF1, CHTIF1, CTCIF1, CGIF1
+   31-28,     27,     26,     25,    24,     23,     22,     21,    20,     19,     18,     17,    16,     15,     14,     13,    12,     11,     10,      9,     8,      7,      6,      5,     4,      3,      2,      1,     0
+        ,      w,      w,      w,     w,      w,      w,      w,     w,      w,      w,      w,     w,      w,      w,      w,     w,      w,      w,      w,     w,      w,      w,      w,     w,      w,      w,      w,    w
+        
+CCR, 0x00000008, 7, 0x00000D20
+RESERVED, MEM2MEM,    PL, MSIZE, PSIZE, MINC, PINC, CIRC, DIR, TEIE, HTIE, TCIE, EN
+   31-15,      14, 13-12, 11-10,   9-8,    7,    6,    5,   4,    3,    2,    1,  0
+        ,      rw,    rw,    rw,    rw,   rw,   rw,   rw,  rw,   rw,   rw,   rw, rw
+
+CNDTR, 0x0000000C, 7, 0x00000D20
+RESERVED, NDT
+31-16,    15-0
+     ,     rw
+
+CPAR, 0x00000010, 7, 0x00000D20
+PA
+31-0
+rw
+
+CMAR, 0x00000014, 7, 0x00000D20
+MA
+31-0
+rw
+

@@ -1,0 +1,35 @@
+AFIO, 0x40010000
+EVCR, 0x00000000
+RESERVED, EVOE, PORT, PIN
+    31-8,    7,  6-4, 3-0
+        ,   rw,   rw,  rw
+
+MAPR, 0x00000004
+RESERVED, SWJ_CFG, RESERVED, ADC2_ETRGREG_REMAP, ADC2_ETRGINJ_REMAP, ADC1_ETRGREG_REMAP, ADC1_ETRGINJ_REMAP, TIM5CH4_IREMAP, PD01_REMAP, CAN_REMAP, TIM4_REMAP, TIM3_REMAP, TIM2_REMAP, TIM1_REMAP, USART3_REMAP, USART2_REMAP, USART1_REMAP, I2C1_REMAP, SPI1_REMAP
+   31-27,   26-24,    23-21,                 20,                 19,                 18,                 17,             16,         15,     14-13,         12,      11-10,        9-8,       7-6,           5-4,            3,            2,          1,          0
+        ,       w,         ,                 rw,                 rw,                 rw,                 rw,             rw,         rw,        rw,         rw,         rw,         rw,        rw,            rw,           rw,           rw,         rw,         rw
+
+EXTICR1, 0x00000008
+RESERVED, EXTI3, EXTI2, EXTI1, EXTI0
+31-16,    15-12,  11-8,   7-4,   3-0
+     ,       rw,     rw,   rw,    rw
+
+EXTICR2, 0x0000000C
+RESERVED, EXTI7, EXTI6, EXTI5, EXTI4
+31-16,    15-12,  11-8,   7-4,   3-0
+     ,       rw,     rw,   rw,    rw
+
+EXTICR3, 0x00000010
+RESERVED, EXTI11, EXTI10, EXTI9, EXTI8
+31-16,    15-12,  11-8,   7-4,   3-0
+     ,       rw,     rw,   rw,    rw
+
+EXTICR4, 0x00000014
+RESERVED, EXTI15, EXTI14, EXTI13, EXTI12
+31-16,    15-12,   11-8,    7-4,   3-0
+     ,       rw,     rw,     rw,    rw
+
+MAPR2, 0x0000001C
+RESERVED, FSMC_NADV, TIM14_REMAP, TIM13_REMAP, TIM11_REMAP, TIM10_REMAP, TIM9_REMAP, RESERVED
+31-11,           10,           9,           8,           7,           6,          5,      4-0
+    ,            rw,          rw,          rw,          rw,          rw,         rw,
