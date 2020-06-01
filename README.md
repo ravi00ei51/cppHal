@@ -14,3 +14,5 @@ Following tests have been run to test gpio, uart and i2c:
 3. MPU9250 acccelerometer/gyro over I2C
 4. Simple UART communication between STM32 board and Laptop
 5. ESP-01 wifi control over UART.
+
+This code is free to use for any educational purposes. For any comeerical usage please notify the developer first. Any commercial usage of this project is not permitted without developer's knowledge.
